@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+.list-box {
+  display: flex;
+  justify-content: left;
+
+  align-items: center;
+  width: 15vw;
+  height: 4vw;
+}
+.check-box {
+  width: 2vw;
+  height: 2vw;
+}

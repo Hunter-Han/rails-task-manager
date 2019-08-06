@@ -1,0 +1,12 @@
+<div class="list-box">
+  <%if @task.completed == true%>
+  <img  class = 'check-box' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTISDXRO3EzJO6hMRiK_nK35StcFAuRq1o7Z-lCzZrEQtgePVGn">
+  <%else%>
+  <img class="check-box" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOykp0uQP9Z164hbp5pwycYF8-j99EBfRRFh5Jg_vx7VvzqpiSfA">
+  <%end%>
+  <h2><%="#{@task.title}"%> </h2>
+</div>
+  <p><%=@task.details%></p>
+  <a href="edit/<%=@task.id%>">Edit task</a>
+  <a href="/list">Go back</a>
+

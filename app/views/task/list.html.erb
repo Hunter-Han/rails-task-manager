@@ -1,0 +1,18 @@
+<h1>Task Manager</h1>
+
+<%@tasks.each_with_index do |task, index|%>
+<div class="list-box">
+  <%if task.completed == true%>
+  <img  class = 'check-box' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTISDXRO3EzJO6hMRiK_nK35StcFAuRq1o7Z-lCzZrEQtgePVGn">
+  <%else%>
+  <img class="check-box" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOykp0uQP9Z164hbp5pwycYF8-j99EBfRRFh5Jg_vx7VvzqpiSfA">
+  <%end%>
+  <a href="/details/<%=index + 1%>"><%=task.title%></a>
+    <%= link_to "Delete task", delete_path(task), method: :delete %>
+</div>
+
+
+<%end%>
+
+
+<a href="/form">+ Create new task</a>
